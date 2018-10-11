@@ -7,7 +7,7 @@ public class SimpleTest {
     @Test
     public void test4Coverall() {
 
-        assertEquals("onetwo", "onetwo");
+        assertEquals("str", "str");
 
     }
 }
