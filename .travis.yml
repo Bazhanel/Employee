@@ -1,13 +1,24 @@
- dist: trusty
+dist: trusty
 
- language: java
+language: java
 
- jdk:
-   - oraclejdk8
+jdk:
+  - oraclejdk8
 
- cache:
-   directories:
-     - $HOME/.m2
+cache:
+  directories:
+    - $HOME/.m2
+    - $HOME/.sonar
+    - $HOME/.sonarscanner
 
- script:
-    - mvn clean test
+script:
+   - mvn clean test
+   - sonar-scanner
+
+addons:
+   sonarcloud:
+     organization: "bazhanel-github"
+     token: d7d9722fa0b16deda7fcab7b49b72f81589a2520
+
+# When any tests are present update script with:
+#- mvn clean test jacoco:report coveralls:report
