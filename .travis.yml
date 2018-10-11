@@ -1,15 +1,13 @@
- dist: trusty
+dist: trusty
 
- language: java
+language: java
 
- jdk:
-   - oraclejdk8
+jdk:
+  - oraclejdk8
 
 cache:
   directories:
     - $HOME/.m2
-    - $HOME/.sonar
-    - $HOME/.sonarscanner
 
 script:
    - mvn clean test
@@ -22,4 +20,3 @@ addons:
 
 # When any tests are present update script with:
 #- mvn clean test jacoco:report coveralls:report
-
