@@ -1,9 +1,9 @@
-dist: trusty
+ dist: trusty
 
-language: java
+ language: java
 
-jdk:
-  - oraclejdk8
+ jdk:
+   - oraclejdk8
 
 cache:
   directories:
@@ -22,3 +22,4 @@ addons:
 
 # When any tests are present update script with:
 #- mvn clean test jacoco:report coveralls:report
+
