@@ -1,0 +1,14 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "f34_group3",
+  "license": "ISC",
+  "dependencies": {
+    "create-react-app": "^2.0.3"
+  }
+}
