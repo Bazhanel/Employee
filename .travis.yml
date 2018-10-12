@@ -1,25 +1,21 @@
 dist: trusty
-
 language: java
-
 jdk:
-  - oraclejdk8
-
+- oraclejdk8
 cache:
   directories:
-    - $HOME/.m2
-
+  - "$HOME/.m2"
+  - "./employee/node_modules/"
 script:
-   - mvn clean test
-   - sonar-scanner
-
+- mvn clean test
+- npm run build --prefix employee/
+- sonar-scanner
+before_script:
+- npm install --prefix employee/
 after_success:
-   - mvn clean test jacoco:report coveralls:report
-
+- mvn clean test jacoco:report coveralls:report
 addons:
-   sonarcloud:
-     organization: "bazhanel-github"
-     token: d7d9722fa0b16deda7fcab7b49b72f81589a2520
-
-# When any tests are present update script with:
-#- mvn clean test jacoco:report coveralls:report
+  sonarcloud:
+    organization: bazhanel-github
+    token:
+      secure: "2RnzU0iVt02WHSd+PnAycsotge3sVzJ7WMZHUu/5KE8a0YCLbjrCCFPuNPGzm2KfhUqWnW19u6joLiCaMxGN+n6P1JUhjaT1s+Wx33h2swgupcHyQNFdZxLpkR7gFHH8ghmj4wlN2jK+giq8k/Hicvp3hcSrywPzUcIv5k9bG7A1JvQ12cifSUbazfeptj61efEFNqDCPzY/XpHPkZR4lentrtaaiZRSJHNSDjVLSI9N2x0UXsro6gFgSg/Ot5FcI+7BdfOIe5DHSqAP0NxPq3Ng5C0I6hCnfOay5p6y5Ds+IKrKwvc5fJBK9Nf5iQC7wQ6DShAzT5S+2Go0mfw96SecpZKZUgPsg9O8jU4vtHAC4vAwg9gBcVMDFxorb5dHdqvYMsksDsJDGmA3zNzNw0M+/aa2RHysUj9cZKG8BIS++tdTv0oM7VeMpSpwfztKEvRtffN3agO62NlE+ex2nQLYfTAMy2j0AXtyzNgPqITcthUPDG/D8yWPQe7CbfBd723jeS53PGcA/xHDpguNTWDw56T1ezfVZTwr4kO851VH3zSy+7W+xNCsyhblr6viqAX6UzUvOpsA+H9K9cBzLhYHv3rqakU8418Yz+TEaBHTzlWefEGTOYt3RDYj8iwLHdrhTnRJpki2X9/cVr15PAV+bL/cLRLabrSdQins8ls="
