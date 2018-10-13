@@ -5,6 +5,7 @@ jdk:
 cache:
   directories:
   - "$HOME/.m2"
+  - "./frontend/node_modules/"
 script:
 - mvn clean test
 - npm run build --prefix frontend/
