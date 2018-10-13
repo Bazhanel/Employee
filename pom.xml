@@ -101,6 +101,11 @@
                 <version>4.3.0</version>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>backend/src/main/resources</directory>
+            </resource>
+        </resources>
     </build>
 
 
