@@ -5,13 +5,13 @@ jdk:
 cache:
   directories:
   - "$HOME/.m2"
-  - "./employee/node_modules/"
+  - "./frontend/node_modules/"
 script:
 - mvn clean test
-- npm run build --prefix employee/
+- npm run build --prefix frontend/
 - sonar-scanner
 before_script:
-- npm install --prefix employee/
+- npm install --prefix frontend/
 after_success:
 - mvn clean test jacoco:report coveralls:report
 addons:
