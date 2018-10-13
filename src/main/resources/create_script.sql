@@ -36,12 +36,12 @@ CREATE TABLE IF NOT EXISTS `employee_information` (
   `employee_id`             BIGINT      NOT NULL,
   `first_name`              VARCHAR(50) NOT NULL,
   `last_name`               VARCHAR(50) NOT NULL,
-  `gender`                  VARCHAR(50) NOT NULL,
-  `birth_date`              VARCHAR(50) NOT NULL,
+  `gender`                  INT         NOT NULL, -- 1-male, 0-female
+  `birth_date`              DATE        NOT NULL,
   `phone_number`            VARCHAR(50) NOT NULL,
   `sport_category`          VARCHAR(50) NOT NULL,
   `additional_phone_number` VARCHAR(50),
-  `additional_email`        VARCHAR(50),
+  `additional_email`        VARCHAR(100),
   `avatar_url`              VARCHAR(4000)
 )
 ENGINE = InnoDB;
