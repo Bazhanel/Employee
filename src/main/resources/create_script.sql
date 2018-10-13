@@ -80,7 +80,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `department` (
   `id`                INT             NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `department_name`   VARCHAR(50)     NOT NULL
+  `department_name`   VARCHAR(50)     NOT NULL,
+  `department_id`     INT             DEFAULT NULL
 )
 ENGINE = InnoDB;
 
