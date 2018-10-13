@@ -47,10 +47,10 @@ CREATE TABLE IF NOT EXISTS `employee_information` (
 ENGINE = InnoDB;
 
 -- -----------------------------------------------------
--- Table `energym`.`EMPLOYEE_ROLES`
+-- Table `energym`.`USER_ROLES`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `employee_roles` (
-  `id`        INT         NOT NULL PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS `user_roles` (
+  `id`        INT         NOT NULL PRIMARY KEY, -- 0-admin, 1- employee, 2-client...
   `type_role` VARCHAR(50) NOT NULL
 )
 ENGINE = InnoDB;
