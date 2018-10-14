@@ -6,13 +6,13 @@ cache:
   directories:
   - "./frontend/node_modules/"
 script:
-- mvn clean test
+- mvn clean test jacoco:report coveralls:report
 - npm run build --prefix frontend/
 - sonar-scanner
 before_script:
 - npm install --prefix frontend/
 after_success:
-- mvn clean test jacoco:report coveralls:report
+
 addons:
   sonarcloud:
     organization: bazhanel-github
