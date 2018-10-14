@@ -4,15 +4,13 @@ jdk:
 - oraclejdk8
 cache:
   directories:
-  - "./frontend/node_modules/"
+  - $HOME/.m2
 script:
 - mvn clean test jacoco:report coveralls:report
 - npm run build --prefix frontend/
 - sonar-scanner
 before_script:
 - npm install --prefix frontend/
-after_success:
-
 addons:
   sonarcloud:
     organization: bazhanel-github
