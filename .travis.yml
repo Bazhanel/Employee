@@ -6,7 +6,7 @@ cache:
   directories:
   - $HOME/.m2
 script:
-- mvn clean test jacoco:report coveralls:report
+- mvn clean test jacoco:report coveralls:report package sonar:sonar
 - npm run build --prefix frontend/
 - sonar-scanner
 before_script:
