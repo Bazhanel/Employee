@@ -13,5 +13,5 @@ before_script:
 - npm install --prefix frontend/
 addons:
   sonarcloud:
-    organization: final-project-group3
-    token: 47892d6a2e5dca6183a413dc00eb0567545fa1fc
+    organization: bazhanel-github
+    token: b41e378fb4ef3e8c3bca24eab4778febd808384a
