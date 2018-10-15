@@ -5,12 +5,14 @@ jdk:
 cache:
   directories:
   - $HOME/.m2
+  - $HOME/.sonar
+  - $HOME/.sonarscanner
 script:
 - mvn clean test jacoco:report coveralls:report
-- npm run build --prefix frontend/
+#- npm run build --prefix frontend/
 - sonar-scanner
-before_script:
-- npm install --prefix frontend/
+#before_script:
+#- npm install --prefix frontend/
 addons:
   sonarcloud:
     organization: bazhanel-github
