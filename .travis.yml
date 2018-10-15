@@ -14,4 +14,10 @@ before_script:
 addons:
   sonarcloud:
     organization: bazhanel-github
-    token: b41e378fb4ef3e8c3bca24eab4778febd808384a
+    token: 
+      secure: "aBtkvOlI9YEyBcDAvrXCP02XKt87XOHqU6OQutiuJ9aH8z0Ww4wUtBUoWpshogzn11JnHUGEz5ImLEcrssD08qlXIY0CNFh8Zbc8moNLkJfRgOtMo1nibJt3ARYygFTIwUOdXu9oq1XGI/4r+TOc6PsHrR0Xuf
+8enoSf1Ki2wUhUjOvi3GIBMc+aUx7gPPVeLIYb8NYVnRb9vmYRXxsf++mXMn5bibGwuM3m/g1awbsB/+JZ8Ds0lseUgAggRNOgSbXMVEn7IyqRhNWs+uf4V+fpmpn73prWXhNyT1qeroSArPxp2JSDuIntgS8ovuVz5mK8+9g
+Myq84+lNNKPDfKNbaZ9cdPniOYMiNHaGfpVwU2HzRoaAFzb3iVsqjdtxymEFFMF09Uc6uVElxMjrBgfXWA1xCD4oUp9RQxzJHk9GhYLjzophAVcHcrlUAVkQVffAxBq9y8jmkszYV0V7K37rMjxaIkzGqeEFmN7vYxoUy+i6t
+ZhpPBsOBrccuz0ihftEieoSExGLmVo6F7+BNHFiMsTte7VVfLaaC/DzA4sDhdKmfbgXRt9KSzC5Z1igcykNrhVYpQQezUfdXaAzP++3hMG8oD8uAVckG0PG7rGQVzOQITAtKcGVENTJDbOmnnm5RJSD+TVfGCvlIyQ+WFo5ye
+MqSuBOY8DOE26CgW64="
+
