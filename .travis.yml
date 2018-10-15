@@ -14,4 +14,10 @@ before_script:
 addons:
   sonarcloud:
     organization: final-project-group3
-    token: 47892d6a2e5dca6183a413dc00eb0567545fa1fc
+    token:
+      secure: "bMM8C5sO87WGX6Y56XBFTk9A9NjyarMb+onS9m9p/ya0G7nJclbCt9qqYmthCjDYX/sGH+kVfBy8YCrfWjB5BzEOR3t/NNYHSu1+uAyjiufcN2nP1bhntEWPEEZ+4r142GtsBCIEGzsq/H2zyFj3GJIHsX3yu6
+eebvz5QP1zaV4RfL0cPoOw5GCQQavxMCkOTMFc3Y4FkXxNdm3rO3p8btO1xberCBuhWrRMROJW+cl1rTXZaIU+YrmNtOs5aigJanlK6d8PY52ZgqA+8IWBp96uPq3NtxQV9MNzDYYs6/cv9sXC49+ssLPvNBUMWo8eCFNaOkL
+WupA/ThQI6r4uOdTFjDhe5mOLSzLRuwXJrD+Xz3lKsJ16xsOvlepI68yZT1nYjvr/l65MEb9kfWz82/ActkkYNSdM1a0f9D+IGC+TSKixkOR8JsDGhUxAInW9q45kpbs6mTwMVxkUgC8qTFFhal4U3rziVCFDN547DAdvv3ye
+b8w3xh08PHwCxRlTpgHB1zc/f/39jXRlqEDGUX72b+Ad7vNyD49z8JvJT65bJnL6pZ57/jD87f3e29yflUY2vChN0cSo328cqhca1FdbnWC5QUW1EOvdKEcohq4SGpa4OVdtL/oVlzjNu8uKc/lLNAv8mC3EKY8cpCk1JFqKx
+7kopk38OxiyWF0ibS4="
+
