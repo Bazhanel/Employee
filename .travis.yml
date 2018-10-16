@@ -5,8 +5,6 @@ jdk:
 cache:
   directories:
   - $HOME/.m2
-  - $HOME/.sonar
-  - $HOME/.sonarscanner
 script:
 - mvn clean test jacoco:report coveralls:report
 #- npm run build --prefix frontend/
@@ -22,4 +20,3 @@ addons:
 Myq84+lNNKPDfKNbaZ9cdPniOYMiNHaGfpVwU2HzRoaAFzb3iVsqjdtxymEFFMF09Uc6uVElxMjrBgfXWA1xCD4oUp9RQxzJHk9GhYLjzophAVcHcrlUAVkQVffAxBq9y8jmkszYV0V7K37rMjxaIkzGqeEFmN7vYxoUy+i6t
 ZhpPBsOBrccuz0ihftEieoSExGLmVo6F7+BNHFiMsTte7VVfLaaC/DzA4sDhdKmfbgXRt9KSzC5Z1igcykNrhVYpQQezUfdXaAzP++3hMG8oD8uAVckG0PG7rGQVzOQITAtKcGVENTJDbOmnnm5RJSD+TVfGCvlIyQ+WFo5ye
 MqSuBOY8DOE26CgW64="
-
