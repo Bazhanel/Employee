@@ -20,4 +20,10 @@ public class TestClassTest {
     assertNotEquals(testClass1, testClass2);
   }
 
+  @Test(expected=NullPointerException.class)
+  public void itShouldThrowNullPointerExceptionWhen() {
+    TestClass testClass = null;
+    System.out.println(testClass.hashCode());
+  }
+
 }
