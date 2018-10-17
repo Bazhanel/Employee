@@ -1,7 +1,6 @@
 package org.danit.energym3;
 
 import org.junit.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

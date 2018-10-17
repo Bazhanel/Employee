@@ -16,9 +16,15 @@ public class Energym3ApplicationTests {
   }
 
   @Test
-  public void isHashIsNotNull(){
+  public void isHashIsNotNull() {
     Energym3Application app = new Energym3Application();
     assertNotNull(app.hashCode());
+  }
+
+  @Test
+  public void newINstanseNotNull() {
+    Energym3Application energym3Application = new Energym3Application();
+    assertNotNull(energym3Application);
   }
 
 }
