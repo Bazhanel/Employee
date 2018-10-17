@@ -2,8 +2,7 @@ package org.danit.energym3;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 public class TestClassTest {
 
@@ -20,10 +19,23 @@ public class TestClassTest {
     assertNotEquals(testClass1, testClass2);
   }
 
-  @Test(expected=NullPointerException.class)
+  @Test(expected = NullPointerException.class)
   public void itShouldThrowNullPointerExceptionWhen() {
     TestClass testClass = null;
     System.out.println(testClass.hashCode());
+  }
+
+  @Test
+  public void canonicalNamesEquals() {
+    TestClass testClass1 = new TestClass();
+    TestClass testClass2 = new TestClass();
+    assertEquals(testClass1.getClass().getCanonicalName(), testClass2.getClass().getCanonicalName());
+  }
+
+  @Test
+  public void isInstanceOfTestClass(){
+    TestClass testClass = new TestClass();
+    assertTrue(testClass.getClass().isInstance(new TestClass()));
   }
 
 }
