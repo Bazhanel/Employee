@@ -2,8 +2,7 @@ package org.danit.energym3;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.assertNotNull;
 
 public class TestPrintTest {
 
@@ -11,7 +10,6 @@ public class TestPrintTest {
   public void newTestPrintIsNotNull() {
     TestPrint tp = new TestPrint();
     assertNotNull(tp);
-
   }
 
 }

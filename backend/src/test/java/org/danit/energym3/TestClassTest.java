@@ -2,22 +2,22 @@ package org.danit.energym3;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class TestClassTest {
 
   @Test
-  public void newInstanceIsNotNull(){
+  public void newInstanceIsNotNull() {
     TestClass testClass = new TestClass();
     assertNotNull(testClass);
   }
 
   @Test
-  public void instancesNotEquals(){
+  public void instancesNotEquals() {
     TestClass testClass1 = new TestClass();
     TestClass testClass2 = new TestClass();
-    assertNotEquals(testClass1,testClass2);
-
+    assertNotEquals(testClass1, testClass2);
   }
 
 }
