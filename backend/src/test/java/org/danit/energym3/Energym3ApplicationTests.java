@@ -27,4 +27,13 @@ public class Energym3ApplicationTests {
     assertNotNull(energym3Application);
   }
 
+  @Test
+  public void mainWithArgs() {
+    Energym3Application.main(new String[]{
+      "--spring.main.web-environment=false",
+      "--spring.autoconfigure.exclude=blahblahblah",
+      // Override any other environment properties according to your needs
+    });
+  }
+
 }
