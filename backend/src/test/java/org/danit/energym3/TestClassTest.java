@@ -1,10 +1,17 @@
 package org.danit.energym3;
 
 import org.junit.Test;
+import org.springframework.boot.test.autoconfigure.data.redis.DataRedisTest;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.Assert.*;
 
+
 public class TestClassTest {
+
+  @Test
+  public void TestClass() {
+  }
 
   @Test
   public void newInstanceIsNotNull() {
@@ -33,7 +40,7 @@ public class TestClassTest {
   }
 
   @Test
-  public void isInstanceOfTestClass(){
+  public void isInstanceOfTestClass() {
     TestClass testClass = new TestClass();
     assertTrue(testClass.getClass().isInstance(new TestClass()));
   }
