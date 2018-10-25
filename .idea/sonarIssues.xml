@@ -98,6 +98,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/backend/src/main/java/org/danit/energym3/beans/DataLoader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/backend/src/main/java/org/danit/energym3/entity/Employee.java">
           <value>
             <set />
@@ -143,6 +148,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/backend/src/main/resources/application.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/backend/src/main/resources/application.yml">
           <value>
             <set />
@@ -154,6 +164,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/backend/src/main/resources/hello.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/backend/src/main/resources/import.sql">
           <value>
             <set />
           </value>

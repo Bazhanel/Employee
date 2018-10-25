@@ -38,7 +38,7 @@ public class EmployeeResource {
   }
 
   @PostMapping("/employee")
-  public ResponseEntity<Object> createStudent(@RequestBody Employee employee) {
+  public ResponseEntity<Object> createEmployee(@RequestBody Employee employee) {
     Employee savedEmployee = employeeRepository.save(employee);
 
     URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")

@@ -1,26 +1,30 @@
 package org.danit.energym3.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
+
+import javax.persistence.*;
 
 @Entity
+@Table(name = "employee")
+@Data
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Employee {
   @Id
-  @GeneratedValue
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private  Long id;
   private String firstName;
   private String lastName;
-  private String fanilyName;
+  private String familyName;
 
-  protected Employee() {
+  public Employee(){
 
   }
 
-  public Employee(String firstName, String lastName, String fanilyName) {
+  public Employee(String firstName, String lastName, String familyName) {
     this.firstName = firstName;
     this.lastName = lastName;
-    this.fanilyName = fanilyName;
+    this.familyName = familyName;
   }
 
   public Long getId() {
@@ -47,11 +51,11 @@ public class Employee {
     this.lastName = lastName;
   }
 
-  public String getFanilyName() {
-    return fanilyName;
+  public String getFamilyName() {
+    return familyName;
   }
 
   public void setFamilyName(String familyName) {
-    this.fanilyName = fanilyName;
+    this.familyName = familyName;
   }
 }
