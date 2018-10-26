@@ -16,15 +16,14 @@ public class Discount {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id")
-  public String name;
+  private String name;
+
   @Column(name = "name")
-  public String percent;
-  @Column(name = "percent ")
-  public String dateFrom;
-  @Column(name = "datefrom ")
-  public String dateTo;
+  private String percent;
 
-  public Discount(String name) {
+  @Column(name = "percent")
+  private String dateFrom;
 
-  }
+  @Column(name = "datefrom")
+  private String dateTo;
 }

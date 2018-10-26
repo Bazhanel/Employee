@@ -23,10 +23,10 @@ public class DataLoader {
   CommandLineRunner init() {
 
     return (String... arg) -> {
-      employeeRepository.save(new Employee("FirstName1", "LastName1", "FamilyName1"));
-      employeeRepository.save(new Employee("FirstName2", "LastName2", "FamilyName2"));
+      //employeeRepository.save(new Employee("FirstName1", "LastName1", "FamilyName1",1L));
+      //employeeRepository.save(new Employee("FirstName2", "LastName2", "FamilyName2",1L ));
 
-      departmentRepository.save(new Department(null, "Energym 1", "Energym 1", new Date(), null, 0));
+      //departmentRepository.save(new Department(null, "Energym 1", "Energym 1", new Date(), null, 0));
     };
   }
 

@@ -1,0 +1,3 @@
+INSERT INTO `department` (`id`, `pid`, `sname`, `name`, `datefrom`, `dateto`, `hier_level`) VALUES (1, NULL, 'Energym 1', 'Energym 1', CURRENT_TIMESTAMP, NULL, 1);
+
+INSERT INTO `employee` (`firstname`, `lastname`, `familyname`, `departmentid`, `jobbegindate`, `dismissdate`, `postid`, `email`, `internalnumber`, `phone1`, `phone2`, `categoryid`, `photo`, `cardid`, `dbuser`, `discountid`, `gender`) VALUES ('Петр', 'Петрович', 'Петров', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0);

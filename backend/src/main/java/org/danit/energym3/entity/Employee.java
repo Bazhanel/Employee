@@ -1,20 +1,13 @@
 package org.danit.energym3.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
-
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Column;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name = "employee")
 @Data
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Employee {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,8 +25,10 @@ public class Employee {
   @Column(name = "birthdate")
   private Date birthDate;
 
-  @Column(name = "departmentid")
-  private Long departmentId;
+  @OneToOne
+  @JsonIgnore
+  @JoinColumn(name = "departmentid", referencedColumnName = "id")
+  private Department department;
 
   @Column(name = "jobbegindate")
   private Date jobBeginDate;
@@ -42,34 +37,34 @@ public class Employee {
   private Date dismissDate;
 
   @Column(name = "postid")
-  public Long postId;
+  private Long postId;
 
   @Column(name = "email")
-  public  String email;
+  private  String email;
 
   @Column(name = "internalnumber")
-  public String internalNumber;
+  private String internalNumber;
 
   @Column(name = "phone1")
-  public  String phone1;
+  private  String phone1;
 
   @Column(name = "phone2")
-  public  String phone2;
+  private  String phone2;
 
   @Column(name = "categoryid")
-  public  Long categoryId;
+  private  Long categoryId;
 
   @Column(name = "photo")
-  public String photo;
+  private String photo;
 
   @Column(name = "cardid")
-  public String cardId;
+  private String cardId;
 
   @Column(name = "dbuser")
-  public String dbUser;
+  private String dbUser;
 
   @Column(name = "discountid")
-  public Long discountId;
+  private Long discountId;
 
   @Column(name = "gender")
   private int gender;
@@ -78,10 +73,11 @@ public class Employee {
 
   }
 
-  public Employee(String firstName, String lastName, String familyName) {
+  public Employee(String firstName, String lastName, String familyName, Long departmentId) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.familyName = familyName;
+    //this.departmentId = departmentId;
   }
 
 }
