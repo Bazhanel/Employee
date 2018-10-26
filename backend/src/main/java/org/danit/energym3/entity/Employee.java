@@ -3,7 +3,13 @@ package org.danit.energym3.entity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Column;
+import java.util.Date;
 
 @Entity
 @Table(name = "employee")
@@ -16,10 +22,57 @@ public class Employee {
 
   @Column(name = "firstname")
   private String firstName;
+
   @Column(name = "lastname")
   private String lastName;
+
   @Column(name = "familyname")
   private String familyName;
+
+  @Column(name = "birthdate")
+  private Date birthDate;
+
+  @Column(name = "departmentid")
+  private Long departmentId;
+
+  @Column(name = "jobbegindate")
+  private Date jobBeginDate;
+
+  @Column(name = "dismissdate")
+  private Date dismissDate;
+
+  @Column(name = "postid")
+  public Long postId;
+
+  @Column(name = "email")
+  public  String email;
+
+  @Column(name = "internalnumber")
+  public String internalNumber;
+
+  @Column(name = "phone1")
+  public  String phone1;
+
+  @Column(name = "phone2")
+  public  String phone2;
+
+  @Column(name = "categoryid")
+  public  Long categoryId;
+
+  @Column(name = "photo")
+  public String photo;
+
+  @Column(name = "cardid")
+  public String cardId;
+
+  @Column(name = "dbuser")
+  public String dbUser;
+
+  @Column(name = "discountid")
+  public Long discountId;
+
+  @Column(name = "gender")
+  private int gender;
 
   public Employee() {
 
@@ -31,35 +84,4 @@ public class Employee {
     this.familyName = familyName;
   }
 
-  public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  public String getFirstName() {
-    return firstName;
-  }
-
-  public void setFirstName(String firstName) {
-    this.firstName = firstName;
-  }
-
-  public String getLastName() {
-    return lastName;
-  }
-
-  public void setLastName(String lastName) {
-    this.lastName = lastName;
-  }
-
-  public String getFamilyName() {
-    return familyName;
-  }
-
-  public void setFamilyName(String familyName) {
-    this.familyName = familyName;
-  }
 }

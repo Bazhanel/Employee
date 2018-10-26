@@ -1,4 +1,4 @@
-package org.danit.energym3.rest;
+package org.danit.energym3.controllers;
 
 import org.danit.energym3.entity.Employee;
 import org.danit.energym3.repositories.EmployeeRepository;
@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-public class EmployeeResource {
+public class EmployeeController {
   @Autowired
   private EmployeeRepository employeeRepository;
 

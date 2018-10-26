@@ -1,4 +1,4 @@
-package org.danit.energym3.rest;
+package org.danit.energym3.controllers;
 
 import org.danit.energym3.entity.Department;
 import org.danit.energym3.exceptions.DepartmentNotFoundException;
@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-public class DepartmentResource {
+public class DepartmentController {
   @Autowired
   private DepartmentRepository departmentRepository;
 
