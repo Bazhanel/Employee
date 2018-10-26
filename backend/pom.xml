@@ -3,20 +3,28 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.danit</groupId>
+    <!--<groupId>org.danit</groupId>
     <artifactId>energym3</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>spring-boot-2-rest-service</name>
+    <name>energym3</name>
     <description>Spring Boot 2 and REST - Example Project</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.0.0.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
+    </parent>-->
+
+    <parent>
+        <artifactId>energym3</artifactId>
+        <groupId>org.danit</groupId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
+    <artifactId>backend</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -78,7 +86,7 @@
                         <id>validate</id>
                         <phase>validate</phase>
                         <configuration>
-                            <configLocation>./checkstyle_config.xml</configLocation>
+                            <configLocation>../checkstyle_config.xml</configLocation>
                             <encoding>utf-8</encoding>
                             <consoleOutput>true</consoleOutput>
                             <failsOnError>true</failsOnError>

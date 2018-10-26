@@ -3,97 +3,12 @@
   <component name="issues">
     <option name="index">
       <map>
-        <entry key="/Dummy.txt">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="/a.dummy">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="/a.sql">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="/fragment.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$APPLICATION_CONFIG_DIR$/consoles/db/a997da73-e231-43b7-8e21-2540284c7cbd/console.sql">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/Downloads/spring-boot-examples-master/spring-boot-2-rest-service-basic/.gitignore">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/Downloads/spring-boot-examples-master/spring-boot-2-rest-service-basic/pom.xml">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/Downloads/spring-boot-examples-master/spring-boot-2-rest-service-basic/src/main/java/com/in28minutes/springboot/rest/example/SpringBoot2RestServiceApplication.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/Downloads/spring-boot-examples-master/spring-boot-2-rest-service-basic/src/main/java/com/in28minutes/springboot/rest/example/student/StudentNotFoundException.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/Downloads/spring-boot-examples-master/spring-boot-2-rest-service-basic/src/main/java/com/in28minutes/springboot/rest/example/student/StudentRepository.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/Downloads/spring-boot-examples-master/spring-boot-2-rest-service-basic/src/main/resources/application.properties">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/Downloads/spring-boot-examples-master/spring-boot-2-rest-service-basic/src/main/resources/data.sql">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$USER_HOME$/Downloads/spring-boot-examples-master/spring-boot-2-rest-service-basic/src/main/resources/schema.sql">
-          <value>
-            <set />
-          </value>
-        </entry>
         <entry key="$PROJECT_DIR$/backend/pom.xml">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/backend/src/main/java/org/danit/config/MvcConfig.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/backend/src/main/java/org/danit/config/WebSecurityConfig.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/backend/src/main/java/org/danit/energym3/Employee.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/backend/src/main/java/org/danit/energym3/EmployeeRepository.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/backend/src/main/java/org/danit/energym3/EmployeeResource.java">
+        <entry key="$PROJECT_DIR$/backend/src/main/java/org/danit/energym3/Energym3Application.java">
           <value>
             <set />
           </value>
@@ -103,17 +18,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/backend/src/main/java/org/danit/energym3/entity/Department.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/backend/src/main/java/org/danit/energym3/entity/Employee.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/backend/src/main/java/org/danit/energym3/exceptions/EmployeeNotFoundException.java">
+        <entry key="$PROJECT_DIR$/backend/src/main/java/org/danit/energym3/exceptions/DepartmentNotFoundException.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/backend/src/main/java/org/danit/energym3/repositories/EmployeeRepository.java">
+        <entry key="$PROJECT_DIR$/backend/src/main/java/org/danit/energym3/repositories/DepartmentRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/backend/src/main/java/org/danit/energym3/rest/DepartmentResource.java">
           <value>
             <set />
           </value>
@@ -123,77 +48,7 @@
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/backend/src/main/java/org/danit/entity/Employee.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/backend/src/main/java/org/danit/exceptions/EmployeeNotFoundException.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/backend/src/main/java/org/danit/repositories/EmployeeRepository.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/backend/src/main/java/org/danit/repositories/d.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/backend/src/main/java/org/danit/resource/EmployeeResource.java">
-          <value>
-            <set />
-          </value>
-        </entry>
         <entry key="$PROJECT_DIR$/backend/src/main/resources/application.properties">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/backend/src/main/resources/application.yml">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/backend/src/main/resources/data.sql">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/backend/src/main/resources/hello.html">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/backend/src/main/resources/import.sql">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/backend/src/main/resources/index.html">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/backend/src/main/resources/login.html">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/backend/src/main/resources/schema-h2.sql">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/backend/src/main/resources/schema.sql">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="D:/Projects/fs4/java-samples/spring-boot-securoty-jdbc/src/main/java/com/app/config/MySecurityConfig.java">
           <value>
             <set />
           </value>

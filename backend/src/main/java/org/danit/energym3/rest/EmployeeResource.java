@@ -5,7 +5,13 @@ import org.danit.energym3.repositories.EmployeeRepository;
 import org.danit.energym3.exceptions.EmployeeNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
@@ -26,9 +32,9 @@ public class EmployeeResource {
   public Employee retrieveStudent(@PathVariable long id) {
     Optional<Employee> employee = employeeRepository.findById(id);
 
-    if (!employee.isPresent())
+    if (!employee.isPresent()) {
       throw new EmployeeNotFoundException("id-" + id);
-
+    }
     return employee.get();
   }
 
@@ -42,7 +48,7 @@ public class EmployeeResource {
     Employee savedEmployee = employeeRepository.save(employee);
 
     URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
-      .buildAndExpand(savedEmployee.getId()).toUri();
+        .buildAndExpand(savedEmployee.getId()).toUri();
 
     return ResponseEntity.created(location).build();
 
@@ -53,8 +59,9 @@ public class EmployeeResource {
 
     Optional<Employee> studentOptional = employeeRepository.findById(id);
 
-    if (!studentOptional.isPresent())
+    if (!studentOptional.isPresent()) {
       return ResponseEntity.notFound().build();
+    }
 
     employee.setId(id);
 

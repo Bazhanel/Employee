@@ -12,12 +12,16 @@ import javax.persistence.*;
 public class Employee {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private  Long id;
+  private Long id;
+
+  @Column(name = "firstname")
   private String firstName;
+  @Column(name = "lastname")
   private String lastName;
+  @Column(name = "familyname")
   private String familyName;
 
-  public Employee(){
+  public Employee() {
 
   }
 
