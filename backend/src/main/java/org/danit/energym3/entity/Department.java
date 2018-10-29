@@ -1,9 +1,13 @@
 package org.danit.energym3.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 
 @Entity
@@ -32,8 +36,6 @@ public class Department {
 
   @Column(name = "hier_level", nullable = false)
   private int hierLevel;
-
-  private Employee employee;
 
   private Department() {
 

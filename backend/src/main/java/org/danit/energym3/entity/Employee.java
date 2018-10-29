@@ -1,9 +1,20 @@
 package org.danit.energym3.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
-import javax.persistence.*;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "employee")
@@ -25,9 +36,8 @@ public class Employee {
   @Column(name = "birthdate")
   private Date birthDate;
 
-  @OneToOne
-  @JsonIgnore
-  @JoinColumn(name = "departmentid", referencedColumnName = "id")
+  @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+  @JoinColumn(name = "departmentid")
   private Department department;
 
   @Column(name = "jobbegindate")
@@ -36,23 +46,25 @@ public class Employee {
   @Column(name = "dismissdate")
   private Date dismissDate;
 
-  @Column(name = "postid")
-  private Long postId;
+  @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+  @JoinColumn(name = "postid")
+  private Post post;
 
   @Column(name = "email")
-  private  String email;
+  private String email;
 
   @Column(name = "internalnumber")
   private String internalNumber;
 
   @Column(name = "phone1")
-  private  String phone1;
+  private String phone1;
 
   @Column(name = "phone2")
-  private  String phone2;
+  private String phone2;
 
-  @Column(name = "categoryid")
-  private  Long categoryId;
+  @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+  @JoinColumn(name = "categoryid")
+  private Category category;
 
   @Column(name = "photo")
   private String photo;
@@ -69,15 +81,8 @@ public class Employee {
   @Column(name = "gender")
   private int gender;
 
-  public Employee() {
-
-  }
-
-  public Employee(String firstName, String lastName, String familyName, Long departmentId) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.familyName = familyName;
-    //this.departmentId = departmentId;
-  }
+  @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+  @JoinColumn(name = "employeeid", referencedColumnName = "id")
+  private List<EmployeeDiscount> employeeDiscountList;
 
 }

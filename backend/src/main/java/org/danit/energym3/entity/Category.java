@@ -9,24 +9,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Data
 @Entity
-@Table(name = "discount")
-public class Discount {
+@Data
+@Table(name = "category")
+class Category {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "id")
   private Long id;
 
   @Column(name = "name")
   private String name;
-
-  @Column(name = "percent")
-  private String percent;
-
-  @Column(name = "datefrom")
-  private String dateFrom;
-
-  @Column(name = "dateto")
-  private String dateTo;
 }
