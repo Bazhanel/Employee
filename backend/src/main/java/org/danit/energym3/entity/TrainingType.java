@@ -1,6 +1,5 @@
 package org.danit.energym3.entity;
 
-
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -12,30 +11,18 @@ import javax.persistence.Table;
 
 @Data
 @Entity
-@Table(name = "organization")
-public class Organization {
+@Table(name = "trainingtype")
+public class TrainingType {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @Column(name = "sname")
-  private String sname;
-
   @Column(name = "name")
   private String name;
 
-  @Column(name = "phone")
-  private String phone;
+  @Column(name = "description")
+  private String description;
 
-  @Column(name = "phone2")
-  private String phone2;
-
-  @Column(name = "email")
-  private String email;
-
-  @Column(name = "address")
-  private String address;
-
-  @Column(name = "orgcode")
-  private String orgcode;
+  @Column(name = "avaliable4group")
+  private int avaliable4group;
 }

@@ -48,5 +48,8 @@ public class Department {
   @JoinColumn(name = "organizationid")
   private Organization organization;
 
+  @Column(name = "position")
+  private String position;
+
 }
 
