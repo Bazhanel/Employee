@@ -57,9 +57,9 @@ public class DepartmentController {
   @PutMapping("/department/{id}")
   public ResponseEntity<Object> updateDepartment(@RequestBody Department department, @PathVariable long id) {
 
-    Optional<Department> depasrtmentOptional = departmentRepository.findById(id);
+    Optional<Department> departmentOptional = departmentRepository.findById(id);
 
-    if (!depasrtmentOptional.isPresent()) {
+    if (!departmentOptional.isPresent()) {
       return ResponseEntity.notFound().build();
     }
     department.setId(id);
