@@ -17,8 +17,8 @@ import static org.danit.energym3.security.SecurityConstants.SECRET;
 import static org.danit.energym3.security.SecurityConstants.TOKEN_PREFIX;
 import static org.danit.energym3.security.SecurityConstants.HEADER_STRING;
 
-public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
-  public JWTAuthorizationFilter(AuthenticationManager authManager) {
+public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
+  public JwtAuthorizationFilter(AuthenticationManager authManager) {
     super(authManager);
   }
 

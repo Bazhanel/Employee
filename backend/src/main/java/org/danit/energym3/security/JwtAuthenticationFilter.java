@@ -24,10 +24,10 @@ import static org.danit.energym3.security.SecurityConstants.SECRET;
 import static org.danit.energym3.security.SecurityConstants.TOKEN_PREFIX;
 import static org.danit.energym3.security.SecurityConstants.HEADER_STRING;
 
-public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
+public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
   private AuthenticationManager authenticationManager;
 
-  public JWTAuthenticationFilter(AuthenticationManager authenticationManager) {
+  public JwtAuthenticationFilter(AuthenticationManager authenticationManager) {
     this.authenticationManager = authenticationManager;
   }
 
