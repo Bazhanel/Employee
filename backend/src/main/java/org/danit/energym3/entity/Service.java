@@ -11,19 +11,17 @@ import javax.persistence.Table;
 
 @Data
 @Entity
-@Table(name = "post")
-public class Post {
+@Table(name = "services")
+public class Service {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private  Long id;
+  private Long id;
 
   @Column(name = "name")
   private String name;
 
-  @Column(name = "percent")
-  private String percent;
-
   @Column(name = "description")
   private String description;
+
 
 }
