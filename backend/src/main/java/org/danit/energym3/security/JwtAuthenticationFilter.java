@@ -4,10 +4,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.danit.energym3.entity.ApplicationUser;
+import org.danit.energym3.exceptions.AuthenticationFaildException;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
@@ -27,13 +27,13 @@ import static org.danit.energym3.security.SecurityConstants.HEADER_STRING;
 public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
   private AuthenticationManager authenticationManager;
 
-  public JwtAuthenticationFilter(AuthenticationManager authenticationManager) {
+  JwtAuthenticationFilter(AuthenticationManager authenticationManager) {
     this.authenticationManager = authenticationManager;
   }
 
   @Override
   public Authentication attemptAuthentication(HttpServletRequest req,
-                                              HttpServletResponse res) throws AuthenticationException {
+                                              HttpServletResponse res) {
     try {
       ApplicationUser creds = new ObjectMapper()
           .readValue(req.getInputStream(), ApplicationUser.class);
@@ -44,7 +44,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
           new ArrayList<>())
       );
     } catch (IOException e) {
-      throw new RuntimeException(e);
+      throw new AuthenticationFaildException(" Authentication Faild" + e);
     }
   }
 
@@ -52,7 +52,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
   protected void successfulAuthentication(HttpServletRequest req,
                                           HttpServletResponse res,
                                           FilterChain chain,
-                                          Authentication auth) throws IOException, ServletException {
+                                          Authentication auth) {
     String token = Jwts.builder()
         .setSubject(((User) auth.getPrincipal()).getUsername())
         .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
