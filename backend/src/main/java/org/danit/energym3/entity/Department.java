@@ -37,5 +37,8 @@ public class Department {
   @Column(name = "hier_level", nullable = false)
   private int hierLevel;
 
+  @Column(name = "orgsign")
+  private int orgSign;
+
 }
 
