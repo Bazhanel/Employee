@@ -18,11 +18,11 @@ import static org.danit.energym3.security.SecurityConstants.SIGN_UP_URL;
 @EnableWebSecurity
 public class WebSecurity extends WebSecurityConfigurerAdapter {
   private UserDetailsServiceImpl userDetailsService;
-  private BCryptPasswordEncoder bCryptPasswordEncoder;
+  private BCryptPasswordEncoder bcryptPasswordEncoder;
 
-  public WebSecurity(UserDetailsServiceImpl userDetailsService, BCryptPasswordEncoder bCryptPasswordEncoder) {
+  public WebSecurity(UserDetailsServiceImpl userDetailsService, BCryptPasswordEncoder bcryptPasswordEncoder) {
     this.userDetailsService = userDetailsService;
-    this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+    this.bcryptPasswordEncoder = bcryptPasswordEncoder;
   }
 
   @Override
@@ -39,7 +39,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 
   @Override
   public void configure(AuthenticationManagerBuilder auth) throws Exception {
-    auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder);
+    auth.userDetailsService(userDetailsService).passwordEncoder(bcryptPasswordEncoder);
   }
 
   @Bean
