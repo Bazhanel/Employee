@@ -12,8 +12,8 @@ import javax.persistence.Table;
 
 @Data
 @Entity
-@Table(name = "organization")
-public class Organization {
+@Table(name = "company")
+public class Company {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
