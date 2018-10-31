@@ -26,6 +26,6 @@ public class Gym {
   @Column(name = "capacity")
   private int capacity;
 
-  @Column(name = "organization")
+  @Column(name = "company")
   private Long organization;
 }

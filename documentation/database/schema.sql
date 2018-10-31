@@ -258,7 +258,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`gym` (
   `name` VARCHAR(100) NOT NULL,
   `description` VARCHAR(250) NULL,
   `capacity` INT NOT NULL DEFAULT 0,
-  `organization` BIGINT NULL,
+  `company` BIGINT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE)
 ENGINE = InnoDB;
