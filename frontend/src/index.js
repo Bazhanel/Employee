@@ -4,9 +4,12 @@ import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Menu from "./Menu";
+import Tabs from "./Tabs";
 
 // ReactDOM.render(<App />, document.getElementById('root'));
 ReactDOM.render(<Menu />, document.getElementById('leaf'));
+
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

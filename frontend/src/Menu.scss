@@ -3,7 +3,7 @@
 
 }
 .ui.segment.pushable.main{
-  height: 500px;
+  height: 100%;
 }
 .ui.visible.push.sidebar.hided{
   transform: translate3d(-75%,0,0);
@@ -37,6 +37,12 @@ display: none;
 p.showed{
 
 display: block;
+}
+.wrap{
+  height: 100%;
+}
+#leaf{
+  height: 100%;
 }
 //.item-name{
 //  @if $type == 'closed' {

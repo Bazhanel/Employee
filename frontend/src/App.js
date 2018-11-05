@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import './Menu.js'
-import SidebarExampleSidebar from "./Menu";
 
 class App extends Component {
 
