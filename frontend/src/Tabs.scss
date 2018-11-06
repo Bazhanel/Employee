@@ -1,0 +1,19 @@
+.rwt__tab[aria-selected=false]{
+  cursor: pointer;
+}
+.rwt__tab{
+  display: none;
+}
+.my-tabs{
+  display: none;
+}
+.close.icon{
+  z-index: 512;
+  transform: translate3d(100%,0,0);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.rwt__tablist:not([aria-orientation="vertical"]) .rwt__tab[aria-selected="true"]:after{
+  border-bottom: 3px solid black;
+}
