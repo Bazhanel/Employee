@@ -1,0 +1,53 @@
+
+.Menu{
+
+}
+.ui.segment.pushable.main{
+  height: 100%;
+}
+.ui.visible.push.sidebar.hided{
+  transform: translate3d(-75%,0,0);
+}
+.ui.icon.menu .item.open-sidebar{
+  text-align: right;
+
+}
+.ui.icon.menu .item.open-sidebar.reverse{
+ transform: rotate(180deg);
+  .ui.icon.menu .item{
+    transform: translate3d(0,0,0);
+  }
+}
+.icon.closed {
+  transition: transform .5s ease, opacity 2s ease;
+  transform: translate3d(200%,0,0);
+  opacity: 1;
+
+}
+.ui.labeled.icon.menu .item>.icon:not(.dropdown).opened{
+
+  transition: opacity .25s ease , height 1s ease;
+  opacity: 0;
+  height: 0;
+}
+p.hided{
+display: none;
+
+}
+p.showed{
+
+display: block;
+}
+.wrap{
+  height: 100%;
+}
+#leaf{
+  height: 100%;
+}
+//.item-name{
+//  @if $type == 'closed' {
+//    display: none;
+//  }@else{
+//    display: block;
+//  }
+//}
