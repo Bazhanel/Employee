@@ -18,8 +18,8 @@
 }
 
 .icon.closed {
-  transition: transform .5s ease, opacity 2s ease;
   transform: translate3d(200%, 0, 0);
+  transition: transform .5s ease, opacity 2s ease;
   opacity: 1;
 }
 
@@ -44,11 +44,3 @@ p.showed {
 #leaf {
   height: 100%;
 }
-
-//.item-name{
-//  @if $type == 'closed' {
-//    display: none;
-//  }@else{
-//    display: block;
-//  }
-//}
