@@ -83,7 +83,7 @@ export default class SidebarExampleSidebar extends Component {
                                         src='https://404store.com/2017/12/08/random-pic-14.md.jpg'
                                         circular
                                     />
-                                    <Card.Header>Lonely <Bot></Bot></Card.Header>
+                                    <Card.Header>Lonely Bot</Card.Header>
                                     <Card.Meta as='a'>Administrator</Card.Meta>
 
                                 </Card.Content>
