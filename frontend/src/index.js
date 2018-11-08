@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Menu from "./Menu";
+import Menu from "./SidebarMenu";
 import Tabs from "./functions";
 
 // ReactDOM.render(<App />, document.getElementById('root'));
