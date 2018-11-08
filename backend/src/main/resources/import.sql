@@ -34,3 +34,6 @@ INSERT INTO `gym` (`id`, `name`, `description`, `capacity`, `company`) VALUES (1
 INSERT INTO `trainingtype` (`id`, `name`, `description`, `avaliable4group`) VALUES (1, 'Стретчинг', 'Стретчинг для группы', 1);
 
 INSERT INTO `grouptraining` (`id`, `employeeid`, `gymid`, `serviceid`, `amount`, `state`, `description`, `trainintypeid`) VALUES (1, 1, 1, 4, 10, 1, NULL, 1);
+
+INSERT INTO `application_user` (`id`, `username`, `password`) VALUES (1, 'user1', '123456');
+INSERT INTO `application_user` (`id`, `username`, `password`) VALUES (2, 'user2', 'qwerty');
