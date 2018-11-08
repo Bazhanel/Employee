@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Header, Icon, Menu, Segment, Sidebar} from 'semantic-ui-react'
+import {Header, Icon, Menu, Segment, Sidebar, Card, Image} from 'semantic-ui-react'
 import {Tab, TabList, TabPanel, TabProvider} from 'react-web-tabs';
 import displayTab from './functions'
 import 'react-web-tabs/dist/react-web-tabs.css';
@@ -30,7 +30,14 @@ export default class SidebarExampleSidebar extends Component {
         const tab = event.target;
         console.log(tab)
     }
-    state = {def:'two',className: 'hided' ,clickSide: this.handleShowClick ,side: 'open-sidebar',icons:'closed'}
+    state = {
+        def:'two',
+        className: 'hided',
+        clickSide: this.handleShowClick,
+        side: 'open-sidebar',
+        icons:'closed',
+        profile_icon:"profile"
+    }
 
     render() {
         const {def} = this.state;
@@ -38,6 +45,7 @@ export default class SidebarExampleSidebar extends Component {
         const {side} = this.state;
         const {clickSide} = this.state;
         const {icons} = this.state;
+        const {profile_icon} = this.state;
 
         return (
             <div className='wrap'>
@@ -63,9 +71,35 @@ export default class SidebarExampleSidebar extends Component {
                             >
                         </Menu.Item>
                         <Menu.Item
+                            def='one'
+                            id='profile'
+                            as='a'
+                            onClick={this.selectTab}
+                        >
+                                <Card.Content>
+                                    <Image
+                                        floated='right'
+                                        size='small'
+                                        src='https://404store.com/2017/12/08/random-pic-14.md.jpg'
+                                        circular
+                                    />
+                                    <Card.Header>Lonely <Bot></Bot></Card.Header>
+                                    <Card.Meta as='a'>Administrator</Card.Meta>
+
+                                </Card.Content>
+
+                            <Icon
+                                name='blind'
+                                className={icons}
+                            />
+                            <p className={className}>
+
+                            </p>
+                        </Menu.Item>
+                        <Menu.Item
                             as='a'
                             id='home'
-                            def='one'
+                            def='two'
                             onClick={this.selectTab}
                         >
                             <Icon
@@ -79,7 +113,7 @@ export default class SidebarExampleSidebar extends Component {
                             </p>
                         </Menu.Item>
                         <Menu.Item
-                            def='two'
+                            def='three'
                             id='group'
                             as='a'
                             onClick={this.selectTab}
@@ -97,7 +131,7 @@ export default class SidebarExampleSidebar extends Component {
                         </Menu.Item>
                         <Menu.Item
                             id='notes'
-                            def='three'
+                            def='four'
                             onClick={this.selectTab}
                             as='a'
                         >
@@ -117,13 +151,14 @@ export default class SidebarExampleSidebar extends Component {
                             basic>
 
                             <Header as='h3'>Application Content</Header>
-                            {/*<Image src='/images/wireframe/paragraph.png' />*/}
+
                             <TabProvider defaultTab={def}>
                                 <section className="my-tabs">
                                     <TabList  className="my-tablist">
-                                        <Tab tabFor="one">Штат <Icon onClick={this.closeTab} name='close'></Icon></Tab>
-                                        <Tab tabFor="two">Гупповые тренировки<Icon onClick={this.closeTab} name='close'></Icon></Tab>
-                                        <Tab tabFor="three" className="my-tab">Справочник<Icon onClick={this.closeTab} name='close'></Icon></Tab>
+                                        <Tab tabFor="one" className="my-tab">Профиль<Icon onClick={this.closeTab} name='close'></Icon></Tab>
+                                        <Tab tabFor="two">Штат <Icon onClick={this.closeTab} name='close'></Icon></Tab>
+                                        <Tab tabFor="three">Гупповые тренировки<Icon onClick={this.closeTab} name='close'></Icon></Tab>
+                                        <Tab tabFor="four" className="my-tab">Справочник<Icon onClick={this.closeTab} name='close'></Icon></Tab>
                                     </TabList>
 
 
@@ -131,12 +166,15 @@ export default class SidebarExampleSidebar extends Component {
                                     //контент для Табов !!!!!
                                     <div className="wrapper">
                                         <TabPanel tabId="one">
-                                            <p>Tab 1 content</p>
+                                            <p>Profile content tab</p>
                                         </TabPanel>
                                         <TabPanel tabId="two">
-                                            <p>Tab 2 content</p>
+                                            <p>Tab 1 content</p>
                                         </TabPanel>
                                         <TabPanel tabId="three">
+                                            <p>Tab 2 content</p>
+                                        </TabPanel>
+                                        <TabPanel tabId="four">
                                             <p>Tab 3 content</p>
                                         </TabPanel>
                                     </div>
