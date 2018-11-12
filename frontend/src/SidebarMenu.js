@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Header, Icon, Menu, Segment, Sidebar, Card, Image} from 'semantic-ui-react'
 import {Tab, TabList, TabPanel, TabProvider} from 'react-web-tabs';
-import displayTab from './functions'
+import displayTab from './displayTab'
 import 'react-web-tabs/dist/react-web-tabs.css';
 import './Tabs.scss'
 import './Menu.scss'
@@ -57,7 +57,7 @@ export default class SidebarMenu extends Component {
       <div className='wrap'>
         <Sidebar.Pushable
           className='main'
-          as={Segment}>
+          as={Segment}>git
           <Sidebar
             as={Menu}
             animation='push'
